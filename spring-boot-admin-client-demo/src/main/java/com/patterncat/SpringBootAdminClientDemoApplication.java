@@ -13,12 +13,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.client.RestTemplate;
 
-@Configuration
-/*@EnableAdminServer //开启Spring Boot Admin 服务
-@EnableDiscoveryClient*/
-@SpringBootApplication
-@EnableHystrix
-@EnableHystrixDashboard
+@Configuration//被用来初始化配置
+@SpringBootApplication//是spring boot最重要的一个注解，用于快捷配置启动类(相当于@Configuration + @EnableAutoConfiguration + @ComponentScan)
+@EnableHystrix//注解熔断
+@EnableHystrixDashboard//
 @EnableScheduling
 @EnableCircuitBreaker
 @EnableFeignClients
