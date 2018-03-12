@@ -81,23 +81,24 @@
 
 
 ### 二、启动主类：
+添加 @EnableAdminServer 注解开启监控
 
 package com.lovnx;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.SpringApplication;<br/>
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;<br/>
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;<br/>
+import org.springframework.context.annotation.Configuration;<br/>
 
-import de.codecentric.boot.admin.config.EnableAdminServer;
+import de.codecentric.boot.admin.config.EnableAdminServer;</br>
 
-@Configuration
-@EnableAutoConfiguration
-@EnableDiscoveryClient
-@EnableAdminServer
-public class SpringBootAdminApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(SpringBootAdminApplication.class, args);
+@Configuration<br/>
+@EnableAutoConfiguration<br/>
+@EnableDiscoveryClient<br/>
+@EnableAdminServer<br/>
+public class SpringBootAdminApplication {<br/>
+    public static void main(String[] args) {<br/>
+        SpringApplication.run(SpringBootAdminApplication.class, args);<br/>
     }
 }
 
