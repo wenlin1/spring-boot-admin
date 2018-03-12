@@ -14,7 +14,7 @@
 10.内存信息   
 11.Spring 环境属性
 ## 工程搭建和简介
-###一、构建service-admin工程，pom如下：  
+### 一、构建service-admin工程，pom如下：  
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -80,7 +80,7 @@
 </project>
 
 
-###二、启动主类：
+### 二、启动主类：
 
 package com.lovnx;
 
@@ -101,7 +101,7 @@ public class SpringBootAdminApplication {
     }
 }
 
-###三、配置文件application.properties：  
+### 三、配置文件application.properties：  
 
 spring.application.name=spring-admin  
 server.port = 8099  
@@ -122,7 +122,7 @@ turbine.clusterNameExpression=new String("default")
 spring.boot.admin.turbine.url=/turbine.stream    
 eureka.client.serviceUrl.defaultZone= http://localhost:8080/eureka/    
 
-###四、logback.xml(实现日志级别修改功能)：  
+### 四、logback.xml(实现日志级别修改功能)：  
 <configuration>
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
     <jmxConfigurator/>
