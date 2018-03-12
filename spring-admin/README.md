@@ -78,6 +78,35 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     </build>
 </project>
 
+二、启动主类：
+
+package com.lovnx;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.context.annotation.Configuration;
+
+import de.codecentric.boot.admin.config.EnableAdminServer;
+
+@Configuration
+@EnableAutoConfiguration
+@EnableDiscoveryClient
+@EnableAdminServer
+public class SpringBootAdminApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootAdminApplication.class, args);
+    }
+}
+
+三、配置文件application.properties：
+
+server.port=7088
+spring.application.name=service-admin
+eureka.client.serviceUrl.defaultZone=http://localhost:7070/eureka/
+management.security.enabled=false
+info.version=@project.version@
+
 
 二、启动主类：
 
