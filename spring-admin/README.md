@@ -131,17 +131,31 @@ public class SpringBootAdminApplication {
 
 三、配置文件application.properties：  
 
-server.port=7088   
-spring.application.name=service-admin   
-eureka.client.serviceUrl.defaultZone=http://localhost:7070/eureka/   
+spring.application.name=spring-admin  
+server.port = 8099  
+spring.jackson.serialization.indent_output=true   
 management.security.enabled=false   
-info.version=@project.version@
+security.user.name=leadeon   
+security.user.password=admin   
+security.basic.enabled=false   
+endpoints.health.sensitive=true   
+spring.boot.admin.url=http://localhost:8099  
+spring.boot.admin.turbine.location=spring-admin  
+spring.boot.admin.turbine.clusters=default  
+spring.boot.admin.turbine.enabled=true   
+spring.boot.admin.routes.endpoints=env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream,turbine.stream   
+turbine.appConfig=spring-client,SPRING-ADMIN  
+turbine.combineHostPort=true  
+turbine.clusterNameExpression=new String("default")  
+spring.boot.admin.turbine.url=/turbine.stream    
+eureka.client.serviceUrl.defaultZone= http://localhost:8080/eureka/    
 
 四、logback.xml(实现日志级别修改功能)：  
 <configuration>
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
     <jmxConfigurator/>
 </configuration>
+
 */
 
 
