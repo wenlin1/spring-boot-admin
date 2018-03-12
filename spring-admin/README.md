@@ -97,4 +97,11 @@ public class SpringBootAdminApplication {
     }
 }
 
+三、配置文件application.properties：
+
+server.port=7088
+spring.application.name=service-admin
+eureka.client.serviceUrl.defaultZone=http://localhost:7070/eureka/
+management.security.enabled=false
+info.version=@project.version@
 
