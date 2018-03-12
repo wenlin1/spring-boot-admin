@@ -105,3 +105,4 @@ eureka.client.serviceUrl.defaultZone=http://localhost:7070/eureka/
 management.security.enabled=false
 info.version=@project.version@
 
+
