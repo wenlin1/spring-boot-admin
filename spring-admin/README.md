@@ -1,7 +1,7 @@
 #                                          spring-boot-admin 监控服务 版本v0.0.1
 
 
-##功能包括：    
+## 功能包括：    
 1.显示 name/id 和版本号.      
 2.显示在线状态.    
 3.Logging日志级别管理    
@@ -127,7 +127,7 @@ eureka.client.serviceUrl.defaultZone= http://localhost:8080/eureka/
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
     <jmxConfigurator/>
 </configuration>
-
+[我的有道云各个jar包和配置文件参数详解](http://blog.csdn.net/guodongxiaren "悬停显示") 
 */
 
 
