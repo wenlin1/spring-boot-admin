@@ -1,7 +1,7 @@
-spring-boot-admin 监控服务 版本v0.0.1
+#                                          spring-boot-admin 监控服务 版本v0.0.1
 
-/**
-功能包括：    
+
+##功能包括：    
 1.显示 name/id 和版本号.      
 2.显示在线状态.    
 3.Logging日志级别管理    
@@ -13,8 +13,8 @@ spring-boot-admin 监控服务 版本v0.0.1
 9.Java 环境变量属性    
 10.内存信息   
 11.Spring 环境属性
-
-一、构建service-admin工程，pom如下：  
+## 工程搭建和简介
+###一、构建service-admin工程，pom如下：  
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -80,7 +80,7 @@ spring-boot-admin 监控服务 版本v0.0.1
 </project>
 
 
-二、启动主类：
+###二、启动主类：
 
 package com.lovnx;
 
@@ -101,35 +101,7 @@ public class SpringBootAdminApplication {
     }
 }
 
-三、配置文件application.properties：
-
-server.port=7088
-spring.application.name=service-admin
-eureka.client.serviceUrl.defaultZone=http://localhost:7070/eureka/
-management.security.enabled=false
-info.version=@project.version@
-
-
-二、启动主类：
-
-package com.lovnx;
-
-import org.springframework.boot.SpringApplication;   
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;  
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;  
-import org.springframework.context.annotation.Configuration;  
-import de.codecentric.boot.admin.config.EnableAdminServer;  
-
-@Configuration @EnableAutoConfiguration   
-@EnableDiscoveryClient  
-@EnableAdminServer    
-public class SpringBootAdminApplication {   
-    public static void main(String[] args) {   
-        SpringApplication.run(SpringBootAdminApplication.class, args);  
-    }   
-}
-
-三、配置文件application.properties：  
+###三、配置文件application.properties：  
 
 spring.application.name=spring-admin  
 server.port = 8099  
@@ -150,7 +122,7 @@ turbine.clusterNameExpression=new String("default")
 spring.boot.admin.turbine.url=/turbine.stream    
 eureka.client.serviceUrl.defaultZone= http://localhost:8080/eureka/    
 
-四、logback.xml(实现日志级别修改功能)：  
+###四、logback.xml(实现日志级别修改功能)：  
 <configuration>
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
     <jmxConfigurator/>
